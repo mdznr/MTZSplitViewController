@@ -9,11 +9,15 @@
 #import "MTZDetailViewController.h"
 
 @interface MTZDetailViewController ()
+
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
 - (void)configureView;
+
 @end
 
 @implementation MTZDetailViewController
+
 
 #pragma mark - Managing the detail item
 
@@ -52,6 +56,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 #pragma mark - Split view
 

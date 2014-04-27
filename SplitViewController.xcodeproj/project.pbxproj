@@ -22,6 +22,8 @@
 		C978AE0F190DA3FA00E4ECF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C978ADEE190DA3FA00E4ECF8 /* UIKit.framework */; };
 		C978AE17190DA3FA00E4ECF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C978AE15190DA3FA00E4ECF8 /* InfoPlist.strings */; };
 		C978AE19190DA3FA00E4ECF8 /* SplitViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C978AE18190DA3FA00E4ECF8 /* SplitViewControllerTests.m */; };
+		C978AE24190DA4E000E4ECF8 /* MTZSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C978AE23190DA4E000E4ECF8 /* MTZSplitViewController.m */; };
+		C978AE28190DAC3500E4ECF8 /* MTZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C978AE27190DAC3500E4ECF8 /* MTZViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		C978AE14190DA3FA00E4ECF8 /* SplitViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SplitViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		C978AE16190DA3FA00E4ECF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C978AE18190DA3FA00E4ECF8 /* SplitViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplitViewControllerTests.m; sourceTree = "<group>"; };
+		C978AE22190DA4E000E4ECF8 /* MTZSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MTZSplitViewController.h; path = Classes/MTZSplitViewController.h; sourceTree = SOURCE_ROOT; };
+		C978AE23190DA4E000E4ECF8 /* MTZSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MTZSplitViewController.m; path = Classes/MTZSplitViewController.m; sourceTree = SOURCE_ROOT; };
+		C978AE26190DAC3500E4ECF8 /* MTZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTZViewController.h; sourceTree = "<group>"; };
+		C978AE27190DAC3500E4ECF8 /* MTZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTZViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +124,13 @@
 				C978ADF9190DA3FA00E4ECF8 /* MTZAppDelegate.h */,
 				C978ADFA190DA3FA00E4ECF8 /* MTZAppDelegate.m */,
 				C978ADFC190DA3FA00E4ECF8 /* Main.storyboard */,
+				C978AE26190DAC3500E4ECF8 /* MTZViewController.h */,
+				C978AE27190DAC3500E4ECF8 /* MTZViewController.m */,
 				C978ADFF190DA3FA00E4ECF8 /* MTZMasterViewController.h */,
 				C978AE00190DA3FA00E4ECF8 /* MTZMasterViewController.m */,
 				C978AE02190DA3FA00E4ECF8 /* MTZDetailViewController.h */,
 				C978AE03190DA3FA00E4ECF8 /* MTZDetailViewController.m */,
+				C978AE25190DA4E600E4ECF8 /* MTZSplitViewController */,
 				C978AE05190DA3FA00E4ECF8 /* Images.xcassets */,
 				C978ADF1190DA3FA00E4ECF8 /* Supporting Files */,
 			);
@@ -155,6 +164,15 @@
 				C978AE15190DA3FA00E4ECF8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C978AE25190DA4E600E4ECF8 /* MTZSplitViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C978AE22190DA4E000E4ECF8 /* MTZSplitViewController.h */,
+				C978AE23190DA4E000E4ECF8 /* MTZSplitViewController.m */,
+			);
+			name = MTZSplitViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +275,9 @@
 			files = (
 				C978ADFB190DA3FA00E4ECF8 /* MTZAppDelegate.m in Sources */,
 				C978AE04190DA3FA00E4ECF8 /* MTZDetailViewController.m in Sources */,
+				C978AE28190DAC3500E4ECF8 /* MTZViewController.m in Sources */,
 				C978AE01190DA3FA00E4ECF8 /* MTZMasterViewController.m in Sources */,
+				C978AE24190DA4E000E4ECF8 /* MTZSplitViewController.m in Sources */,
 				C978ADF7190DA3FA00E4ECF8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

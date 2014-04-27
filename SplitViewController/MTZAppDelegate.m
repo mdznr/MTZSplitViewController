@@ -8,14 +8,28 @@
 
 #import "MTZAppDelegate.h"
 
+#import "MTZSplitViewController.h"
+#import "MTZMasterViewController.h"
+#import "MTZDetailViewController.h"
+
 @implementation MTZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-	UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
-	UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
-	splitViewController.delegate = (id)navigationController.topViewController;
+	MTZSplitViewController *splitViewController = (MTZSplitViewController *) self.window.rootViewController;
+	
+	MTZMasterViewController *masterViewController = [[MTZMasterViewController alloc] init];
+	UINavigationController *masterNavigationController = [[UINavigationController alloc] initWithRootViewController:masterViewController];
+	
+	MTZDetailViewController *detailViewController = [[MTZDetailViewController alloc] init];
+	UINavigationController *detailNavigationController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
+	
+	splitViewController.masterViewController = masterNavigationController;
+	splitViewController.detailViewController = detailNavigationController;
+	
+	splitViewController.delegate = (id)detailNavigationController.topViewController;
+	
     return YES;
 }
 							
