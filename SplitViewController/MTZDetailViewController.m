@@ -48,6 +48,17 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+	
+	self.view.backgroundColor = [UIColor whiteColor];
+	
+	self.detailDescriptionLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 40)];
+	self.detailDescriptionLabel.textAlignment = NSTextAlignmentCenter;
+	self.detailDescriptionLabel.autoresizingMask = UIViewAutoresizingFlexibleMargins;
+	self.detailDescriptionLabel.center = self.view.center;
+	[self.view addSubview:self.detailDescriptionLabel];
+	
+	self.detailDescriptionLabel.text = @"Detail Description";
+	
 	[self configureView];
 }
 
