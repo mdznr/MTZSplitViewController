@@ -11,7 +11,7 @@ The current API for setting the view controllers on a `UISplitViewController` is
 @property (nonatomic, copy) NSArray *viewControllers;
 ```
 
-The array must only contain two elements, and they must be of type `UIViewController` (or a subclass). However, these cannot be enforced by the compiler, and can only be enforced at run-time. Based on this, maybe `NSArray` is not the best structure to use in this situation. Not only will it require runtime checks to enforce the restrictions, but the design of the interface does not hint at how to (successfully) use it. The user *must* read the documentation. These are not signs of good API.
+The array must only contain two elements, and they must be of type `UIViewController` (or a subclass). The first view controller is used as the master view controller (left), and the second as the detail view controller (right). However, these cannot be enforced by the compiler, and can only be enforced at run-time. Based on this, maybe `NSArray` is not the best structure to use in this situation. Not only will it require run-time checks to enforce the restrictions, but the design of the interface does not hint at how to (successfully) use it. The user *must* read the documentation. These are not signs of good API.
 
 
 ### Proposed API Changes
