@@ -17,6 +17,9 @@
 /// @discussion The first view controller in this array is typically hidden when the device is in a portrait orientation. Assign a delegate object to the receiver if you want to coordinate the display of this view controller using a popover.
 @property (nonatomic, copy) NSArray *viewControllers DEPRECATED_ATTRIBUTE;
 
+- (instancetype)initWithMasterViewController:(UIViewController *)masterViewController
+					 andDetailViewController:(UIViewController *)detailViewController;
+
 ///
 @property (nonatomic, assign) UIViewController *masterViewController;
 

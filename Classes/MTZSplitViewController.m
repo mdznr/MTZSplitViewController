@@ -14,6 +14,18 @@
 
 @implementation MTZSplitViewController
 
+- (instancetype)initWithMasterViewController:(UIViewController *)masterViewController
+					 andDetailViewController:(UIViewController *)detailViewController
+{
+	self = [super init];
+	if (self) {
+		_masterViewController = masterViewController;
+		_detailViewController = detailViewController;
+		[self udpateViewControllersArray];
+	}
+	return self;
+}
+
 - (void)setMasterViewController:(UIViewController *)masterViewController
 {
 	_masterViewController = masterViewController;
