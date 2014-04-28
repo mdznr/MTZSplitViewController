@@ -17,6 +17,12 @@
 - (instancetype)initWithMasterViewController:(UIViewController *)masterViewController
 					 andDetailViewController:(UIViewController *)detailViewController
 {
+	// Both masterViewController and detailViewController must be non-nil.
+	if ( !masterViewController || !detailViewController ) {
+		NSLog(@"Both masterViewController and detailViewController must be non-nil.");
+		return nil;
+	}
+	
 	self = [super init];
 	if (self) {
 		_masterViewController = masterViewController;
