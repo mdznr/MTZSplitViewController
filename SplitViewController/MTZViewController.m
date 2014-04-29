@@ -14,9 +14,4 @@
 
 @implementation MTZViewController
 
-- (void)loadView
-{
-    [super loadView];
-}
-
 @end
