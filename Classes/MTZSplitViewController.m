@@ -38,10 +38,28 @@
 	[self udpateViewControllersArray];
 }
 
+- (UIViewController *)masterViewController
+{
+	if ([super.viewControllers count] >= 0) {
+		return super.viewControllers[0];
+	}
+	
+	return nil;
+}
+
 - (void)setDetailViewController:(UIViewController *)detailViewController
 {
 	_detailViewController = detailViewController;
 	[self udpateViewControllersArray];
+}
+
+- (UIViewController *)detailViewController
+{
+	if ([super.viewControllers count] > 0) {
+		return super.viewControllers[1];
+	}
+	
+	return nil;
 }
 
 - (void)udpateViewControllersArray
